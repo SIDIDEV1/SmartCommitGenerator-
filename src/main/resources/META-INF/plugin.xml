@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>org.sididev.smart-commit-generator</id>
+    <name>Smart Commit Generator</name>
+    <version>1.0.0</version>
+    <vendor email="sidimariko61@gmail.com" url="https://github.com/sididev1">sididev</vendor>
+
+    <description><![CDATA[
+    <p>Generate intelligent commit messages automatically based on your Git changes.</p>
+
+    <h3>Features:</h3>
+    <ul>
+        <li>Analyzes your staged changes</li>
+        <li>Generates conventional commit messages</li>
+        <li>Detects file types and contexts (API, UI, config, etc.)</li>
+        <li>Injects message directly into commit field</li>
+        <li>Professional commit history</li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <p>Open Git commit dialog (Cmd+K/Ctrl+K) and click the "Generate" button.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <actions>
+        <action id="SmartCommitAction"
+                class="org.sididev.SmartCommitAction"
+                text="Generate"
+                description="Generate intelligent commit message"
+                icon="AllIcons.Actions.Lightning">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
