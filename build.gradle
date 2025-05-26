@@ -22,7 +22,7 @@ java {
 
 patchPluginXml {
     sinceBuild = '233'
-    untilBuild = '241.*'
+    untilBuild = '251.*'
 
     changeNotes = '''
     <ul>
